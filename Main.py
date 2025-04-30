@@ -1,8 +1,8 @@
 import yfinance as yf
 import numpy as np
 import pandas as pd
-import plotly.graph_object as go
 
+import plotly.graph_object as go
 from dash import dcc, html
 from dash.dependecies import Input, Output
 
