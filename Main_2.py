@@ -103,9 +103,9 @@ previous_indice_day = previous_indice_day.to_numpy()
 x_classifier_ftse = np.concatenate((x_classifier_ftse,previous_indice_day), axis=1)
 
 classifier_model_ftse = joblib.load("data/model/classifier_model_ftse.joblib")
-model_accuracy_ftse = joblib.load("data/model/model_accuracy_ftse.joblib")
-classification_report_ftse = joblib.load("data/model/classification_report_ftse.joblib")
 
 y_pred = {}
 for model in classifier_model_ftse.keys():
     y_pred[model] = classifier_model_ftse[model].predict(x_classifier_ftse)
+
+joblib.dump(y_pred,"data/model/y_pred.joblib")
