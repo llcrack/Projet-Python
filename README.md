@@ -5,6 +5,7 @@
 Ce projet a pour but de développer une application web en Python (via Streamlit) capable de :
 
 - Prédire la direction journalière de l’indice boursier **FTSE 100** (hausse ou baisse),
+- Dépasser un taux de réussite naïf de 50 % (tirage aléatoire) qui constitue un enjeu majeur en finance de marché,
 - En se basant sur un modèle de **Machine Learning** entraîné en amont,
 - Tout en proposant une **interface utilisateur interactive et informative**.
 
