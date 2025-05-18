@@ -109,7 +109,23 @@ Affiche également :
 
 ## 📁 Structure du projet
 
-<pre><code>📁 Structure du projet : Projet-Python/ │ ├── web_app.py # Interface Streamlit ├── prediction.py # Prédiction ├── training_ftse.py # Entraînement des modèles │ ├── requirements.txt ├── README.md │ └── data/ ├── data/ # Données FTSE actuelles ├── model/ # Modèles et résultats ├── history/ # Fichiers d’historique (timestamp) ├── training_data/ # Données d'entraînement └── training_data_x_classifier/ # Features finales du modèle </code></pre>
+```
+Projet-Python/
+│
+├── web_app.py                      # Interface Streamlit
+├── prediction.py                   # Script de prédiction
+├── training_ftse.py                # Entraînement des modèles
+│
+├── requirements.txt                # Liste des dépendances
+├── README.md                       # Présentation du projet
+│
+└── data/
+    ├── data/                       # Données FTSE actuelles
+    ├── model/                      # Modèles et résultats sauvegardés
+    ├── history/                    # Timestamps et historiques
+    ├── training_data/              # Données brutes d'entraînement
+    └── training_data_x_classifier/ # Features finales utilisées pour le modèle
+```
 
 ---
 
