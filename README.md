@@ -119,7 +119,7 @@ python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
 streamlit run web_app.py
-
+```
 ### 👨‍💻 Auteurs
 
 Ce projet a été réalisé en autonomie par :
