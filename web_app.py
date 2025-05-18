@@ -176,14 +176,18 @@ with open("data/history/ftse100.txt","r") as ftse: #ouverture du fichier .txt d'
     row = ftse.readlines()
     last_line = int(row[-1].strip())
 
-#si la dernière fois qu'on à téléchargé les données n'était pas aujourd'hui de à partir de 8h utc alors on actualise 
+#si la dernière fois qu'on à téléchargé les données n'était pas aujourd'hui à partir de 8h utc alors on actualise 
 eight_hours = int(3600*8)
 if ((last_line-eight_hours)//86400 != (start_time-eight_hours)//86400):  
     data = yf.download(selected_index_ticker, period="5y",interval="1d")
     data.to_csv("data/data/web_app_ftse_data.csv")
 else:
-    data = pd.read_csv("data/data/web_app_ftse_data.csv",index_col=[0],header=[0,1])
-    data.index = pd.to_datetime(data.index)
+    if os.path.exists("data/data/web_app_ftse_data.csv"):
+        data = pd.read_csv("data/data/web_app_ftse_data.csv",index_col=[0],header=[0,1])
+        data.index = pd.to_datetime(data.index)
+    else:
+        data = yf.download(selected_index_ticker, period="5y",interval="1d")
+        data.to_csv("data/data/web_app_ftse_data.csv")
 
 #ajout d'une colonne RSI en utilisant la fonction compute_rsi crée précédemment
 index_data = data.copy()
