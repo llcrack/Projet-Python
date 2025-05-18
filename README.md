@@ -1,6 +1,6 @@
 🎯 Objectif du projet
 Ce projet a pour but de développer une application web en Python (via Streamlit) capable de :
-- Prédire la direction journalière de l’indice boursier FTSE 100 (hausse ou baisse),
+Prédire la direction journalière de l’indice boursier FTSE 100 (hausse ou baisse),
 En se basant sur un modèle de Machine Learning entraîné en amont,
 Tout en proposant une interface utilisateur interactive et informative.
 L'utilisateur peut sélectionner des paramètres temporels, consulter le RSI de l’indice sur une période choisie, et afficher le graphique temps réel de TradingView.
