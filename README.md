@@ -37,17 +37,9 @@ Nous avons entraîné **trois variantes du modèle** selon des objectifs différ
 
 - `standard` : modèle classique sans pondération des classes.  
 - `balanced` : pondération automatique pour gérer un éventuel déséquilibre haussiers/baissiers.  
-- `signal` : favorise la détection des journées haussières pour simuler un signal d’achat.
+- `signal` : favorise la détection des journées baissières et augmente la précision des signaux haussiers.
 
 👉 Ce choix permet à l’utilisateur de sélectionner le modèle le plus adapté à sa stratégie : **prédiction globale** ou **détection d'opportunité long/short**.
-
-### 🔧 Trois versions du modèle ont été créées :
-
-- `standard` : modèle de base,
-- `balanced` : pondération équilibrée des classes,
-- `signal` : priorisation des journées haussières.
-
----
 
 ## 🖥️ Fonctionnement de l’application
 
