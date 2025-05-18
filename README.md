@@ -1,17 +1,17 @@
-🎯 Objectif du projet
+🎯 Objectif du projet :
 Ce projet a pour but de développer une application web en Python (via Streamlit) capable de :
 Prédire la direction journalière de l’indice boursier FTSE 100 (hausse ou baisse),
 En se basant sur un modèle de Machine Learning entraîné en amont,
 Tout en proposant une interface utilisateur interactive et informative.
 L'utilisateur peut sélectionner des paramètres temporels, consulter le RSI de l’indice sur une période choisie, et afficher le graphique temps réel de TradingView.
 
-📊 Choix du dataset
+📊 Choix du dataset : 
 Le projet utilise des données financières accessibles librement via Yahoo Finance (yfinance). Les sources incluent :
 3 des 100 actions le FTSE 100 : AstraZeneca (AZN.L), HSBC (HSBA.L), Unilever (ULVR.L), (composantes majeur du footsie 100)
 L’indice FTSE 100 lui-même (^FTSE),
 L’indice de volatilité VIX (^VIX), en tant qu’indicateur exogène global.
 
-🧠 Choix du modèle
+🧠 Choix du modèle : 
 Le modèle est un RandomForestClassifier (scikit-learn) entraîné pour classer chaque journée comme haussière ou baissière selon :
 Les rendements et gaps d’ouverture des actions individuelles,
 Le retour de volatilité du VIX,
@@ -22,7 +22,7 @@ standard : modèle de base,
 balanced : pondération équilibrée des classes,
 signal : priorisation des journées haussières.
 
-🖥️ Fonctionnement de l’application
+🖥️ Fonctionnement de l’application :
 L'application Streamlit est organisée en 3 modules :
 
 training_ftse.py :
@@ -51,7 +51,7 @@ Un graphique interactif via TradingView.
 Ne faire la prédiction d'aujourd'hui qu’après 8h (heure de Londres) correspondant à l'ouverture de la place boursière Londonienne,
 Adapter automatiquement les dates si un week-end ou jour férié est sélectionné.
 
-✅ Fonctionnalités
+✅ Fonctionnalités : 
 ✔️ Prédiction boursière FTSE avec Random Forest
 ✔️ Choix du modèle et période d’analyse
 ✔️ RSI graphique interactif
@@ -59,11 +59,11 @@ Adapter automatiquement les dates si un week-end ou jour férié est sélectionn
 ✔️ Optimisation du chargement des données
 ✔️ Contrôle temporel intelligent (UTC, jours fériés)
 
-🚫 Limitations connues
+🚫 Limitations connues : 
 L'application suppose que le marché britannique est fermé les week-ends et certains jours fériés UK.
 Les données sont récupérées via yfinance : en cas de surcharge API ou d’erreur réseau, une exception peut survenir.
 
-📁 Structure du projet
+📁 Structure du projet : 
 Projet-Python/
 │
 ├── web_app.py                  # Interface Streamlit
@@ -80,10 +80,10 @@ Projet-Python/
     ├── training_data/          # Données d'entraînement
     └── training_data_x_classifier/ # Features finales pour le modèle disponible sur Google Drive
     
-📹 Démonstration vidéo
+📹 Démonstration vidéo : 
 La vidéo de démonstration est fournie dans le dossier Google Drive : https://drive.google.com/drive/folders/1mEXAjKg-vCgXeArxqmXDLxjJt7pAo05m?usp=drive_link
 
-📌 Auteurs
+📌 Auteurs : 
 Projet réalisé en autonomie par Yao TREZISE, Komi TREZISE et Mamadou cherif DIALLO dans le cadre d’un projet Streamlit de prédiction supervisée.
 
 
