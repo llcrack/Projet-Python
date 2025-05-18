@@ -25,11 +25,20 @@ Le projet utilise des données financières accessibles librement via **Yahoo Fi
 
 ## 🧠 Choix du modèle
 
-Le modèle est un **RandomForestClassifier** (scikit-learn), entraîné pour classer chaque journée comme haussière ou baissière selon :
+Nous avons utilisé un **RandomForestClassifier** de la bibliothèque `scikit-learn` pour plusieurs raisons :
 
-- Les rendements et **gaps d’ouverture** des actions individuelles,
-- Le retour de volatilité du **VIX**,
-- Le comportement de l’indice FTSE sur les **5 derniers jours**.
+- Il **gère bien les données tabulaires** avec des relations non linéaires.
+- Il est **robuste au surapprentissage**, surtout avec des hyperparamètres bien choisis.
+- Il fournit une **bonne interprétabilité** (via l’importance des features).
+- Il s'adapte bien à des datasets de taille moyenne comme ici (moins de 10 000 lignes après traitement).
+
+Nous avons entraîné **trois variantes du modèle** selon des objectifs différents :
+
+- `standard` : modèle classique sans pondération des classes.  
+- `balanced` : pondération automatique pour gérer un éventuel déséquilibre haussiers/baissiers.  
+- `signal` : favorise la détection des journées haussières pour simuler un signal d’achat.
+
+👉 Ce choix permet à l’utilisateur de sélectionner le modèle le plus adapté à sa stratégie : **prédiction globale** ou **détection d'opportunité long/short**.
 
 ### 🔧 Trois versions du modèle ont été créées :
 
