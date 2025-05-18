@@ -18,7 +18,8 @@ Le projet utilise des données financières accessibles librement via **Yahoo Fi
 
 - 3 des 100 actions du FTSE 100 : **AstraZeneca (AZN.L), HSBC (HSBA.L), Unilever (ULVR.L)**, composantes majeures du FTSE 100,
 - L’indice FTSE 100 lui-même (`^FTSE`),
-- L’indice de volatilité **VIX (`^VIX`)**, en tant qu’indicateur exogène global.
+- L’indice de volatilité **VIX (`^VIX`)**, en tant qu’indicateur exogène global.  
+👉 Ces données permettent de construire des features à la fois micro (comportement de titres individuels) et macro (volatilité, tendance de l’indice) pour améliorer la précision des prédictions.
 
 ---
 
