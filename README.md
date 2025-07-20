@@ -1,4 +1,4 @@
-# 📈 Prédiction quotidienne du FTSE 100 avec Streamlit et Machine Learning
+# 📈 Prédiction quotidienne du FTSE 100 avec Streamlit grâce au Machine learning
 
 ## 🎯 Objectif du projet
 
